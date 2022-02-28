@@ -27,20 +27,24 @@ var dy = -25;
 document.addEventListener("keydown", key, false);
 document.addEventListener("keyup", key, false);
 
+var key_press
 
 function key(e) {
     if(e.key == "Right" || e.key == "ArrowRight") {
         x += dx
+        key_press = 'right'
     }
     else if(e.key == "Left" || e.key == "ArrowLeft") {
         x -= dx
-
+        key_press = 'left'
     }
     else if(e.key == "Up" || e.key == "ArrowUp") {
         y += dy
+        key_press = 'up'
     }
     else if(e.key == "Down" || e.key == "ArrowDown") {
         y -= dy
+        key_press = 'down'
     }
     console.log(e)
 }
@@ -49,7 +53,11 @@ function key(e) {
 
 function duck() {
     ctx.beginPath();
-    const canvas_duck = ctx.drawImage(duck_image_right, x, y, duck_size, duck_size);
+    if (key_press === 'left'){
+        canvas_duck = ctx.drawImage(duck_image_left, x, y, duck_size, duck_size);
+    }else {
+        canvas_duck = ctx.drawImage(duck_image_right, x, y, duck_size, duck_size);
+    }
     ctx.closePath();
 
 }
