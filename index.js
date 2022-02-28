@@ -27,7 +27,7 @@ var dy = -25;
 document.addEventListener("keydown", key, false);
 document.addEventListener("keyup", key, false);
 
-var key_press
+var key_press = ''
 
 function key(e) {
     if(e.key == "Right" || e.key == "ArrowRight") {
