@@ -1,0 +1,20 @@
+canvas {
+    width: 100%;
+    height: 100%;
+    background-image: url(https://user-images.githubusercontent.com/12768542/36515179-1426a740-1746-11e8-8da2-b51c4402a079.png);
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    padding: 0;
+    margin: auto;
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+h1 {
+    text-align: center;
+}
